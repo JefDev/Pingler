@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="container-fluid"> 
+        <div class="well">
+            <%= form_for @contact do |f| %>
+                
+                <div class="form-group">
+                    <%= f.label :naam %>
+                    <%= f.text_field :name, class: 'form-control' %>
+                </div>
+                
+                <div class="form-group">
+                    <%= f.label :email %>
+                    <%= f.email_field :email, class: 'form-control' %>
+                </div>
+                
+                <div class="form-group">
+                    <%= f.label :bericht %>
+                    <%= f.text_area :comments, class: 'form-control' %>
+                </div>
+                    
+                <div class="form-group"></div>
+                    <%= f.submit 'Verstuur', class: 'btn btn-default' %>
+                </div>
+                  
+            <% end %> 
+        </div>
+    </div>
+    
+</div>

@@ -30,7 +30,8 @@
         
         <!-- <li class="active"><%= link_to "Home", root_path %> <span class="sr-only">(current)</span></a></li> -->
         <li><%= link_to "Home", root_path %>></li>
-        <li><%= link_to "About us", about_path %>></li>
+        <li><%= link_to "Over Pingler", about_path %>></li>
+        <li><%= link_to "Contacteer ons", new_contact_path %>></li>
         
         <!--
         <li class="dropdown">
@@ -72,7 +73,10 @@
   </div><!-- /.container-fluid -->
 </nav>  
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
+
 
 </body>
 </html>
