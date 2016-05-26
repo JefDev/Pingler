@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  devise_for :users
+
  resources :contacts
  #     contacts GET    /contacts(.:format)          contacts#index
  #              POST   /contacts(.:format)          contacts#create
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
  #              PUT    /contacts/:id(.:format)      contacts#update
  #              DELETE /contacts/:id(.:format)      contacts#destroy
  
+ get '/new' => 'pages#new'
  get '/about' => 'pages#about'
  root 'pages#home'
  
