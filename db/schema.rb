@@ -11,12 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160525191010) do
+ActiveRecord::Schema.define(version: 20160526183237) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.integer  "user_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "title"
+    t.date     "birth_date"
+    t.string   "sex"
+    t.string   "company"
+    t.string   "vat_number"
+    t.string   "language"
+    t.string   "phone_number"
+    t.string   "mobile_phone_number"
+    t.string   "contact_email"
+    t.string   "address_invoice"
+    t.string   "address_number_inv"
+    t.integer  "postal_code_inv"
+    t.string   "city_inv"
+    t.string   "country_inv"
+    t.string   "address_deliv"
+    t.string   "address_number_deliv"
+    t.integer  "postal_code_deliv"
+    t.string   "city_deliv"
+    t.string   "country_deliv"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
