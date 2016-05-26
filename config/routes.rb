@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
-  devise_for :users
-
+  devise_for :users, controllers: { registrations: 'users/registrations'}
+  
+ resources :users do
+    resouce :profile    
+ end
+ 
  resources :contacts
  #     contacts GET    /contacts(.:format)          contacts#index
  #              POST   /contacts(.:format)          contacts#create
